@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>rawsound.js Demo</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="demo-css/github-markdown.css">
+	<link rel="stylesheet" type="text/css" href="demo-css/main.css">
+	<script>
+		// Show JS code on hover
+		window.onload = function() {
+			var list = document.querySelectorAll('button');
+			for (var button of list) {
+				button.title = (button.onclick+'').replace(/^[^{]*[{]/,'').replace(/[}][^}]*/,'').trim();
+			}
+		}
+	</script>
+</head>
+<body class="markdown-body">
+
+	<script src="src/SoundFx.js"></script>
+	<script src="src/SoundFile.js"></script>
+	<script>
+
+		function frand(a, b) {
+			var min = Math.min(a, b);
+			var max = Math.max(a, b);
+			return min + (max - min) * Math.random();
+		}
+
+		var dog = new SoundFx('sound/dog.mp3', 0.75);
+		var gun = new SoundFx('sound/gun.mp3', 0.75);
+		
+		var numbers = new SoundFile('sound/numbers.mp3');
+		var rain = new SoundFile('sound/rain.mp3');
+
+	</script>
+
+	<h1>rawsound.js Demo</h1>
+
+	<h2>SoundFx dog.mp3</h2>
+
+	<div class="set">
+		<button onclick="dog.play();">Play</button>
+	</div>
+
+	<div class="set">
+		<button onclick="dog.play(1);">Loud</button>
+		<button onclick="dog.play(0.25);">Quietly</button>
+	</div>
+
+	<div class="set">
+		<button onclick="dog.play(false, 0.5);">Slow</button>
+		<button onclick="dog.play(false, 1);">Normal</button>
+		<button onclick="dog.play(false, 1.5);">Faster</button>
+		<button onclick="dog.play(false, 2);">Fast</button>
+	</div>
+
+	<div class="set">
+		<button onclick="dog.play(frand(0.25, 1), frand(0.25, 2));">Random</button>
+	</div>
+
+	<h2>SoundFx gun.mp3</h2>
+
+	<div class="set">
+		<button onclick="gun.play();">Play</button>
+	</div>
+
+	<div class="set">
+		<button onclick="gun.play(1);">Loud</button>
+		<button onclick="gun.play(0.25);">Quietly</button>
+	</div>
+
+	<div class="set">
+		<button onclick="gun.play(false, 0.5);">Slow</button>
+		<button onclick="gun.play(false, 1);">Normal</button>
+		<button onclick="gun.play(false, 1.5);">Faster</button>
+		<button onclick="gun.play(false, 2);">Fast</button>
+	</div>
+
+	<div class="set">
+		<button onclick="gun.play(frand(0.25, 1), frand(0.25, 2));">Random</button>
+	</div>
+
+	<h2>SoundFile numbers.mp3</h2>
+
+	<div class="set">
+		<button onclick="numbers.play();">Play</button>
+		<button onclick="numbers.play(0, 0.75);">Play slow</button>
+		<button onclick="numbers.play(0, 1.5);">Play fast</button>
+	</div>
+	<div class="set">
+		<button onclick="numbers.playLoop();">Loop</button>
+		<button onclick="numbers.playLoop(0, 0.75);">Loop slow</button>
+		<button onclick="numbers.playLoop(0, 1.5);">Loop fast</button>
+	</div>
+	<div class="set">
+		<button onclick="numbers.pause();">Pause</button>
+		<button onclick="numbers.resume();">Resume</button>
+		<button onclick="numbers.stop();">Stop</button>
+	</div>
+
+	<h2>SoundFile rain.mp3</h2>
+
+	<div class="set">
+		<button onclick="rain.play();">Play</button>
+		<button onclick="rain.play(0, 0.75);">Play slow</button>
+		<button onclick="rain.play(0, 1.5);">Play fast</button>
+	</div>
+	<div class="set">
+		<button onclick="rain.playLoop();">Loop</button>
+		<button onclick="rain.playLoop(0, 0.75);">Loop slow</button>
+		<button onclick="rain.playLoop(0, 1.5);">Loop fast</button>
+	</div>
+	<div class="set">
+		<button onclick="rain.pause();">Pause</button>
+		<button onclick="rain.resume();">Resume</button>
+		<button onclick="rain.stop();">Stop</button>
+	</div>
+
+	<h2>Source</h2>
+
+	<p>
+		<a href="https://github.com/philipp-schwarz" target="_blank">rawsound.js</a> is a project on GitHub.
+	</p>
+	<p>
+		Dog, gun and rain sound files are from <a href="https://mixkit.co/" target="_blank">mixkit.co</a>.
+	</p>
+
+	<p>
+		Numbers are from <a href="https://ttsmp3.com/" target="_blank">ttsmp3.com</a>.
+	</p>
+
+</body>
+</html> 

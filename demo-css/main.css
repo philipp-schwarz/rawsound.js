@@ -1,0 +1,26 @@
+button {
+	width: 100%;
+	max-width: 150px;
+	text-align: left;
+	padding: 10px;
+	border: 1px solid #0366d6;
+	background-color: #0366d610;
+	margin-bottom: 5px;
+}
+button:active {
+	background-color: #0366d630;
+}
+.set {
+	margin-bottom: 20px;
+}
+.code {
+	color: #888;
+	float: right;
+}
+
+@media screen and (max-width: 700px) {
+	button {
+		width: 40%;
+		max-width: 40%;
+	}
+}
