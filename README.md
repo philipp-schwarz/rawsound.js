@@ -20,7 +20,7 @@ Class documentation
 
 Also see: Demo / Getting Started
 
-### Cheatcheat
+### Cheatsheet
 
 ```javascript
 var sfx = new SoundFx(file);
@@ -43,7 +43,7 @@ sfile.stop();
 
 If you just want to see rawsound.js in action, open the demo:
 
-ONLINE DEMO
+[ONLINE DEMO](https://philipp-schwarz.github.io/dist/rawsound.js/)
 
 ## Getting started
 
